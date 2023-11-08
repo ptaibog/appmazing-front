@@ -2,19 +2,19 @@
   <mat-card-title>Detalle del contacto</mat-card-title>
   <mat-card-content class="card-content">
     <p>
-      <mat-icon>person</mat-icon> <strong>Nombre:</strong> Pablo
+      <mat-icon>person</mat-icon> <strong>Nombre:</strong> {{ contact.name }}
     </p>
     <p>
-      <mat-icon>person</mat-icon> <strong>Primer Apellido:</strong> Taibo
+      <mat-icon>person</mat-icon> <strong>Primer Apellido:</strong> {{contact.firstsurname}}
     </p>
     <p>
-      <mat-icon>person</mat-icon> <strong>Segundo Apellido:</strong> García
+      <mat-icon>person</mat-icon> <strong>Segundo Apellido:</strong> {{ contact.secondsurname }}
     </p>
     <p>
-      <mat-icon>phone</mat-icon> <strong>Teléfono:</strong> 657667665
+      <mat-icon>phone</mat-icon> <strong>Teléfono:</strong> {{ contact.phonenumber }}
     </p>
     <p>
-      <mat-icon>email</mat-icon> <strong>Email:</strong> ptaibo@gmail.com
+      <mat-icon>email</mat-icon> <strong>Email:</strong> {{ contact.mail }}
     </p>
   </mat-card-content>
 </mat-card>
