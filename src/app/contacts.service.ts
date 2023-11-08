@@ -14,4 +14,11 @@ export class ContactsService {
     const headers = new HttpHeaders();
     return this.http.get<any>(url, {headers});
   }
+// c_id puede sercualqwuier nombre pero pone eso para referirse a contact
+  getContact(c_id: number): Observable<any>{
+    const url = 'http://localhost:30030/contacts/get';
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    const body = JSON.stringify({id: c_id});
+    return this.http.post(url, body, {headers});
+  }
 }

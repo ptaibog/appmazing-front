@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactHomeComponent } from './contact-home/contact-home.component';
-import { MatButtonModule, MatTableModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatIconModule, MatTableModule, MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
@@ -22,7 +22,9 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     MatTableModule,
     HttpClientModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
