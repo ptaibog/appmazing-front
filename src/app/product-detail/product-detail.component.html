@@ -1,0 +1,21 @@
+<mat-card class="card">
+  <mat-card-title>Detalle del producto</mat-card-title>
+  <mat-card-content class="card-content">
+    <p>
+      <mat-icon>shop</mat-icon> <strong>Nombre:</strong> {{ product.name }}
+    </p>
+    <p>
+      <mat-icon>equalizer</mat-icon> <strong>Stock:</strong>
+      {{ product.stock }}
+    </p>
+    <p>
+      <mat-icon>euro_symbol</mat-icon> <strong>Precio:</strong>
+      {{ product.price }}
+    </p>
+    <p>
+      <mat-icon>notifications</mat-icon> <strong>Activo:</strong>
+      {{ product.active }}
+    </p>
+    <p><mat-icon>date_range</mat-icon> <strong>Fecha de colocación:</strong> {{ product.date_added }}</p>
+  </mat-card-content>
+</mat-card>
