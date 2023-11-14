@@ -22,4 +22,8 @@ export class ContactDetailComponent implements OnInit {
     this.router.navigate(['/contact/edit', this.route.snapshot.params['id']]);
   }
 
+  closeContact(){
+    this.router.navigate(['/contacts']);
+  }
+
 }
