@@ -14,7 +14,13 @@
     </p>
     <p>
       <mat-icon>notifications</mat-icon> <strong>Activo:</strong>
-      {{ product.active }}
+      <!-- {{ product.active }} -->
+        <span *ngIf="product.active">En stock</span>
+        <span *ngIf="!product.active">Agotado</span>
+    </p>
+    <p>
+      <mat-icon>category</mat-icon> <strong>Categoría:</strong>
+      {{ product.category_id?.name }}
     </p>
     <p><mat-icon>date_range</mat-icon> <strong>Fecha de colocación:</strong> {{ product.date_added }}</p>
   </mat-card-content>

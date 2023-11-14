@@ -28,4 +28,11 @@ export class ContactsService {
     const body = contact;
     this.http.post(url, body, {headers}).subscribe();
   }
+
+  updateContact(contact: any):void{
+    const url = 'http://localhost:30030/contacts/update';
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    const body = contact;
+    this.http.put(url, body, {headers}).subscribe();
+  }
 }

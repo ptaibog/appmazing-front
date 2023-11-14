@@ -1,0 +1,20 @@
+.card{
+    margin: 20px 40px 0px 40px;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .button button{
+    margin-left: 1%;
+  }
+  .active{
+    margin: 0px 40px 30px 10px;
+  }

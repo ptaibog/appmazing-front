@@ -19,5 +19,5 @@ export class ProductHomeComponent implements OnInit {
   openDetailForm(row: any){
     this.router.navigate(['/product', row.id]);
   }
-  displayedColumns: string[] = ['id', 'name', 'stock', 'price', 'active', 'date_added'];
+  displayedColumns: string[] = ['id', 'name', 'stock', 'price', 'active', 'date_added', 'category_id'];
 }
