@@ -21,8 +21,11 @@
     <button mat-raised-button color = "primary" type="button" (click)="editContact()">
       <mat-icon>edit</mat-icon>
     </button>
-    <button mat-raised-button color = "warn" type = "button" (click)="closeContact()">
+    <button mat-raised-button type = "button" (click)="closeContact()">
       <mat-icon>cancel</mat-icon>
   </button>
+  <button mat-raised-button color = "warn" type = "button" (click)="openDeleteDialog(contact.id)">
+    <mat-icon>delete</mat-icon>
+</button>
   </mat-card-actions>
 </mat-card>

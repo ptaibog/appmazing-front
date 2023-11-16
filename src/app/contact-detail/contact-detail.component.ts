@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactsService } from '../contacts.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { ContactDeleteComponent } from '../contact-delete/contact-delete.component';
 
 @Component({
   selector: 'app-contact-detail',
@@ -10,12 +12,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ContactDetailComponent implements OnInit {
   contact: any;
 
-  constructor(private contactsService: ContactsService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private contactsService: ContactsService, private route: ActivatedRoute, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.contactsService.getContact(this.route.snapshot.params['id']).subscribe(data =>{
       this.contact = data;
     });
+  }
+
+  openDeleteDialog(contactId: number): void{
+    this.dialog.open(ContactDeleteComponent, {data: {contactId: contactId}});
   }
 
   editContact(){
