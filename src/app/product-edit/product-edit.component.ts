@@ -26,6 +26,9 @@ export class ProductEditComponent implements OnInit {
       
       let dateFormated = this.datepipe.transform(this.product.date_added, 'yyyy-MM-dd');
       this.product.date_added = dateFormated;
+      if(this.product.category_id == null){
+        this.product.category_id = this.category;
+      }
     })
     this.categoryService.getCategories().subscribe(categoriesData =>{
       this.categories = categoriesData;

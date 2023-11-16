@@ -17,6 +17,7 @@ import { ContactEditComponent } from './contact-edit/contact-edit.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { CommonModule, DatePipe} from '@angular/common';
 import { ContactDeleteComponent } from './contact-delete/contact-delete.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,10 @@ import { ContactDeleteComponent } from './contact-delete/contact-delete.componen
     ProductNewComponent,
     ContactEditComponent,
     ProductEditComponent,
-    ContactDeleteComponent
+    ContactDeleteComponent,
+    ProductDeleteComponent
   ],
-  entryComponents: [ContactDeleteComponent],
+  entryComponents: [ContactDeleteComponent, ProductDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

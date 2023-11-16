@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../products.service';
 import { DatePipe } from '@angular/common';
+import { ProductDeleteComponent } from '../product-delete/product-delete.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-product-detail',
@@ -11,7 +13,7 @@ import { DatePipe } from '@angular/common';
 export class ProductDetailComponent implements OnInit {
   product: any;
 
-  constructor(private productsService: ProductsService, private route: ActivatedRoute, private router: Router, private datepipe: DatePipe) { }
+  constructor(private productsService: ProductsService, private route: ActivatedRoute, private router: Router, private datepipe: DatePipe, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.productsService.getProduct(this.route.snapshot.params['id']).subscribe(data =>{
@@ -19,6 +21,10 @@ export class ProductDetailComponent implements OnInit {
       let dateFormated = this.datepipe.transform(this.product.date_added, 'dd/MM/yyyy');
       this.product.date_added = dateFormated;
     });
+  }
+
+  openDeleteDialog(productId: number): void{
+    this.dialog.open(ProductDeleteComponent, {data: {productId: productId}})
   }
 
   editProduct(){

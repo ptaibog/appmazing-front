@@ -50,6 +50,9 @@
       <button mat-icon-button color = "primary" (click)="editProductDetail(product.id); $event.stopPropagation()">
         <mat-icon>edit</mat-icon>
       </button>
+      <button mat-icon-button color = "warn" (click)="openDeleteDialog(product.id); $event.stopPropagation()">
+        <mat-icon>delete</mat-icon>
+      </button>
     </td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

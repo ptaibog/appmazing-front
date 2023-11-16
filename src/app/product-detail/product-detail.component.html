@@ -28,8 +28,11 @@
     <button mat-raised-button color = "primary" type="button" (click)="editProduct()">
       <mat-icon>edit</mat-icon>
     </button>
-    <button mat-raised-button color = "warn" type = "button" (click)="closeProduct()">
+    <button mat-raised-button type = "button" (click)="closeProduct()">
       <mat-icon>cancel</mat-icon>
   </button>
+  <button mat-raised-button color = "warn" type = "button" (click)="openDeleteDialog(product.id)">
+    <mat-icon>delete</mat-icon>
+</button>
   </mat-card-actions>
 </mat-card>
