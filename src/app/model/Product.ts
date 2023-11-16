@@ -6,6 +6,6 @@ export class Product{
   price: number;
   active: boolean;
   estado: string;
-  date_added: Date;
-  category: Category;
+  date_added: string;
+  category_id: Category;
 }

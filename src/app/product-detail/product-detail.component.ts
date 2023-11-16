@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../products.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,12 +11,22 @@ import { ProductsService } from '../products.service';
 export class ProductDetailComponent implements OnInit {
   product: any;
 
-  constructor(private productsService: ProductsService, private route: ActivatedRoute) { }
+  constructor(private productsService: ProductsService, private route: ActivatedRoute, private router: Router, private datepipe: DatePipe) { }
 
   ngOnInit() {
     this.productsService.getProduct(this.route.snapshot.params['id']).subscribe(data =>{
       this.product = data;
+      let dateFormated = this.datepipe.transform(this.product.date_added, 'dd/MM/yyyy');
+      this.product.date_added = dateFormated;
     });
+  }
+
+  editProduct(){
+    this.router.navigate(['/product/edit', this.route.snapshot.params['id']]);
+  }
+
+  closeProduct(){
+    this.router.navigate(['/products']);
   }
 
 }
