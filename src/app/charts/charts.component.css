@@ -1,0 +1,10 @@
+.card{
+    margin: 20px 40px 0px 40px;
+}
+
+.chart-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

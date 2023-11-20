@@ -1,0 +1,73 @@
+<mat-card class="card">
+  <mat-card-title> Charts- Contacts </mat-card-title>
+  <mat-card-content>
+    <div class="chart-row">
+      <div>
+      <p><strong>Initial surname</strong></p>
+      <ngx-charts-bar-vertical
+        [view]="[400, 300]"
+        [results]="initialLetter"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Initial of surname"
+        yAxisLabel="Number of contacts"
+      >
+      </ngx-charts-bar-vertical>
+    </div>
+    <div>
+      <p><strong>Length of name</strong></p>
+      <ngx-charts-line-chart
+        [view]="[400, 300]"
+        [results]="contactsByFullName"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Full Name Length"
+        yAxisLabel="Number of contacts"
+      >
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+    <div class="chart-row">
+      <div>
+      <p><strong>Extensions</strong></p>
+      <ngx-charts-pie-chart [view]="[400, 300]" [results]="emailExtensions" [labels]="true" [doughnut]="true">
+      </ngx-charts-pie-chart>
+    </div>
+    <div>
+      <p><strong>Prefix</strong></p>
+      <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="phonePrefixData" [xAxis]="true" [yAxis]="true"
+      [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="Number Contacts" yAxisLabel="Phone Prefix">
+      </ngx-charts-bar-horizontal>
+    </div>
+  </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="card">
+<mat-card-title>Charts - Products</mat-card-title>
+<mat-card-content>
+  <div class="chart-row">
+    <div>
+      <p><strong>Quantity/Category</strong></p>
+      <ngx-charts-pie-chart [view]="[400, 300]" [results]="productsEachCategory" [legend]="true" [legendPosition]="'below'" xAxisLabel="Number Products" yAxisLabel="Category"></ngx-charts-pie-chart>
+    </div>
+    <div>
+      <p><strong>Active Products (number)</strong></p>
+      <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="productsActive" [xAxis]="true" [yAxis]="true" [legend]="true" [legendPosition]="'below'"></ngx-charts-bar-horizontal>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div>
+      <p><strong>Grafica 3 Productos</strong></p>
+    </div>
+    <div>
+      <p><strong>Grafica 4 Productos</strong></p>
+    </div>
+  </div>
+</mat-card-content>
+</mat-card>
