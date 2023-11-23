@@ -63,10 +63,25 @@
   </div>
   <div class="chart-row">
     <div>
-      <p><strong>Grafica 3 Productos</strong></p>
+      <p><strong>Amount of stock</strong></p>
+      <ngx-charts-bar-vertical
+        [view]="[400, 300]"
+        [results]="productsStock"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Quantity of stock"
+        yAxisLabel="Amount of products in range"
+      >
+      </ngx-charts-bar-vertical>
     </div>
     <div>
-      <p><strong>Grafica 4 Productos</strong></p>
+      <p><strong>Products by Price Range</strong></p>
+      <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="productsPrices" [xAxis]="true" [yAxis]="true"
+      [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="Quantity" yAxisLabel="Range of Prices">
+      </ngx-charts-bar-horizontal>
     </div>
   </div>
 </mat-card-content>
