@@ -5,5 +5,25 @@ table{
 }
 
 #new-product{
-    margin: 20px 0px 0px 40px
+    margin: 20px 0px 0px 40px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#new-product:hover{
+    background-color: rgb(255, 230, 223);
+}
+
+.rows-contact:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+#editButton{
+    margin-right: 10px;
+}
+#editButton:hover{
+    transform: scale(1.1);
+}
+#deleteButton:hover{
+    transform: scale(1.1);
 }

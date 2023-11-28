@@ -1,0 +1,9 @@
+#confirmButton{
+  margin-left: 10px;
+}
+#closeButton:hover{
+  background-color: rgb(218, 221, 221);
+}
+#confirmButton:hover{
+  background-color: rgb(231, 2, 2);
+}

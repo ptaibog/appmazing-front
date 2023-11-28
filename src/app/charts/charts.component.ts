@@ -382,12 +382,4 @@ for(let product in productCountPrice10){
   return productsPerPrice;
 }
 
-
-
-
-
-
-
-
-
 }

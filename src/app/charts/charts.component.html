@@ -2,7 +2,7 @@
   <mat-card-title> Charts- Contacts </mat-card-title>
   <mat-card-content>
     <div class="chart-row">
-      <div>
+      <div class="charts">
       <p><strong>Initial surname</strong></p>
       <ngx-charts-bar-vertical
         [view]="[400, 300]"
@@ -17,7 +17,7 @@
       >
       </ngx-charts-bar-vertical>
     </div>
-    <div>
+    <div class="charts">
       <p><strong>Length of name</strong></p>
       <ngx-charts-line-chart
         [view]="[400, 300]"
@@ -34,12 +34,12 @@
     </div>
   </div>
     <div class="chart-row">
-      <div>
+      <div class="charts">
       <p><strong>Extensions</strong></p>
       <ngx-charts-pie-chart [view]="[400, 300]" [results]="emailExtensions" [labels]="true" [doughnut]="true">
       </ngx-charts-pie-chart>
     </div>
-    <div>
+    <div class="charts">
       <p><strong>Prefix</strong></p>
       <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="phonePrefixData" [xAxis]="true" [yAxis]="true"
       [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="Number Contacts" yAxisLabel="Phone Prefix">
@@ -48,21 +48,21 @@
   </div>
   </mat-card-content>
 </mat-card>
-<mat-card class="card">
+<mat-card class="card card-bottom">
 <mat-card-title>Charts - Products</mat-card-title>
 <mat-card-content>
   <div class="chart-row">
-    <div>
+    <div class="charts">
       <p><strong>Quantity/Category</strong></p>
       <ngx-charts-pie-chart [view]="[400, 300]" [results]="productsEachCategory" [legend]="true" [legendPosition]="'below'" xAxisLabel="Number Products" yAxisLabel="Category"></ngx-charts-pie-chart>
     </div>
-    <div>
+    <div class="charts">
       <p><strong>Active Products (number)</strong></p>
       <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="productsActive" [xAxis]="true" [yAxis]="true" [legend]="true" [legendPosition]="'below'"></ngx-charts-bar-horizontal>
     </div>
   </div>
   <div class="chart-row">
-    <div>
+    <div class="charts">
       <p><strong>Amount of stock</strong></p>
       <ngx-charts-bar-vertical
         [view]="[400, 300]"
@@ -77,7 +77,7 @@
       >
       </ngx-charts-bar-vertical>
     </div>
-    <div>
+    <div class="charts">
       <p><strong>Products by Price Range</strong></p>
       <ngx-charts-bar-horizontal [view]="[400, 300]" [results]="productsPrices" [xAxis]="true" [yAxis]="true"
       [showXAxisLabel]="true" [showYAxisLabel]="true" xAxisLabel="Quantity" yAxisLabel="Range of Prices">

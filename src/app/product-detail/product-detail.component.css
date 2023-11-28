@@ -1,10 +1,20 @@
-.card{
-    margin: 20px 40px 0px 40px;
+.card {
+  margin: 20px 40px 0px 40px;
 }
-.card-content p{
-    display: flex;
-    align-items: center;
+.card-content p {
+  display: flex;
+  align-items: center;
 }
-.card-content p mat-icon, .card-content p strong{
-    margin-right: 5px;
+.card-content p mat-icon,
+.card-content p strong {
+  margin-right: 5px;
+}
+#button-save:hover {
+  background-color: rgb(47, 47, 250);
+}
+#button-cancel:hover {
+  background-color: rgb(231, 2, 2);
+}
+#button-back:hover {
+  background-color: rgb(218, 221, 221);
 }

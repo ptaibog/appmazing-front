@@ -18,3 +18,9 @@
   .active{
     margin: 0px 40px 30px 10px;
   }
+  #button-save:hover{
+    background-color: rgb(47, 47, 250);
+  }
+  #button-cancel:hover{
+    background-color: rgb(231, 2, 2);
+  }

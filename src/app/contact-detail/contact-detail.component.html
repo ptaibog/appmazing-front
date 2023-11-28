@@ -18,13 +18,13 @@
     </p>
   </mat-card-content>
   <mat-card-actions align = "end">
-    <button mat-raised-button color = "primary" type="button" (click)="editContact()">
+    <button id="button-save" mat-raised-button color = "primary" type="button" (click)="editContact()">
       <mat-icon>edit</mat-icon>
     </button>
-    <button mat-raised-button type = "button" (click)="closeContact()">
+    <button id="button-back" mat-raised-button type = "button" (click)="closeContact()">
       <mat-icon>cancel</mat-icon>
   </button>
-  <button mat-raised-button color = "warn" type = "button" (click)="openDeleteDialog(contact.id)">
+  <button id="button-cancel" mat-raised-button color = "warn" type = "button" (click)="openDeleteDialog(contact.id)">
     <mat-icon>delete</mat-icon>
 </button>
   </mat-card-actions>

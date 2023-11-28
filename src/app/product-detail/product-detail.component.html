@@ -25,13 +25,13 @@
     <p><mat-icon>date_range</mat-icon> <strong>Fecha de colocación:</strong> {{ product.date_added }}</p>
   </mat-card-content>
   <mat-card-actions align = "end">
-    <button mat-raised-button color = "primary" type="button" (click)="editProduct()">
+    <button id="button-save" mat-raised-button color = "primary" type="button" (click)="editProduct()">
       <mat-icon>edit</mat-icon>
     </button>
-    <button mat-raised-button type = "button" (click)="closeProduct()">
+    <button id="button-back" mat-raised-button type = "button" (click)="closeProduct()">
       <mat-icon>cancel</mat-icon>
   </button>
-  <button mat-raised-button color = "warn" type = "button" (click)="openDeleteDialog(product.id)">
+  <button id="button-cancel" mat-raised-button color = "warn" type = "button" (click)="openDeleteDialog(product.id)">
     <mat-icon>delete</mat-icon>
 </button>
   </mat-card-actions>

@@ -39,15 +39,15 @@
   <ng-container matColumnDef = "actions">
     <th mat-header-cell *matHeaderCellDef>Acciones</th>
     <td mat-cell *matCellDef="let contact">
-      <button mat-icon-button color = "primary" (click)="editContactDetail(contact.id); $event.stopPropagation()">
+      <button id="editButton" mat-icon-button color = "primary" (click)="editContactDetail(contact.id); $event.stopPropagation()">
         <mat-icon>edit</mat-icon>
       </button>
-      <button mat-icon-button color = "warn" (click)="openDeleteDialog(contact.id); $event.stopPropagation()">
+      <button id="deleteButton" mat-icon-button color = "warn" (click)="openDeleteDialog(contact.id); $event.stopPropagation()">
         <mat-icon>delete</mat-icon>
       </button>
     </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns" (click) = "openDetailForm(row)"></tr>
+  <tr class = "rows-contact" mat-row *matRowDef="let row; columns: displayedColumns" (click) = "openDetailForm(row)"></tr>
 </table>
